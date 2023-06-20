@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/Editor/Sample.uss?fileID=7433441132597879392&amp;guid=8e86081f9bbf2ba4db27dc0a32c90bc6&amp;type=3#Sample" />
-    <ui:Label text="These controls were created in UI Builder" name="initialLabel" />
-    <ui:Button text="I&apos;ma Button" display-tooltip-when-elided="true" name="button1" enable-rich-text="true" style="display: flex; visibility: visible; overflow: hidden; height: auto; -unity-font-style: normal;" />
-    <ui:DropdownField label="Dropdown" index="-1" choices="a, b, c" />
-    <ui:Toggle label="Number?" name="toggle1" />
-    <uie:ObjectField label="Object Field" type="Item, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
-</ui:UXML>
