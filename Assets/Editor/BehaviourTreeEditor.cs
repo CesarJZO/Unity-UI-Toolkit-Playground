@@ -40,7 +40,6 @@ public class BehaviourTreeEditor : EditorWindow
         if (tree)
         {
             _treeView.PopulateView(tree);
-
         }
     }
 }

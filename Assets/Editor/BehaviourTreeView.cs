@@ -39,6 +39,20 @@ namespace Editor
                 CreateNodeView(node);
         }
 
+        public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
+        {
+            evt.menu.AppendAction("Add node", a => CreateNode());
+            evt.menu.AppendAction("Add other node", a => CreateNode());
+            // Append a new nested menu under the "Add node" menu item.
+            evt.menu.AppendAction("Add nested menu item", a => CreateNode(), DropdownMenuAction.AlwaysEnabled, evt.target);
+        }
+
+        private void CreateNode()
+        {
+            Node node = _tree.CreateNode();
+            CreateNodeView(node);
+        }
+
         private void CreateNodeView(Node node)
         {
             var nodeView = new NodeView(node);

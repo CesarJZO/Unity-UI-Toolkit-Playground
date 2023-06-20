@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class BehaviourTree : ScriptableObject
 {
     public Node rootNode;
 
     public List<Node> nodes = new List<Node>();
 
-    public Node CreateNode(Type type)
+    public Node CreateNode()
     {
-        var node = CreateInstance(type) as Node;
-        node.name = type.Name;
-        node.guid = Guid.NewGuid().ToString();
+        var node = CreateInstance<Node>();
+        node.name = Guid.NewGuid().ToString();
         nodes.Add(node);
 
         AssetDatabase.AddObjectToAsset(node, this);
